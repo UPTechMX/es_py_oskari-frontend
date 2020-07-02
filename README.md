@@ -1,6 +1,6 @@
 # Oskari
 
-[Oskari](http://www.oskari.org/) Map Application Framework apunta a proveer un framework y una colección de bundles (módulos) de mejoras de funcionamiento y plugins para un desarrollo rápido de características ricas de aplicaciones web GI.
+[Oskari](http://www.oskari.org/) Map Application Framework busca proveer un framework y una colección de bundles (módulos) de mejoras de funcionamiento y plugins para un desarrollo rápido de características ricas de aplicaciones web GI.
 
 Documentación disponible en [http://www.oskari.org].
 
