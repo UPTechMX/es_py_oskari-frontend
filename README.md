@@ -4,9 +4,9 @@
 
 Documentación disponible en [http://www.oskari.org].
 
-Este repositorio contiene el código frontend framework para Oskari. El desarrollo del frontend framework requiere de una aplicación frontend. Puedes clonar la muestra de aplicación frontend de [https://github.com/oskariorg/sample-application]. El directorio de la aplicación muestra debería estar localizada cerca del directorio del frontend framework.
+Este repositorio contiene el código frontend framework para Oskari. El desarrollo del frontend framework requiere de una aplicación frontend. Puedes clonar la aplicación de muestra frontend de [https://github.com/UPTechMX/es_py_oskari-application]. El directorio de la aplicación muestra debería estar localizada cerca del directorio del frontend framework.
 
-Necesitarás que el servidor de oskari se ejecute en respuesta a las demandas del XHR hechas por el frontend. Puedes descargar una copia pre-compilada del servidor de [http://www.oskari.org/download]. También puedes construirla desde la fuente por clonación [oskari-server](https://github.com/oskariorg/oskari-server) y [sample-server-extension](https://github.com/oskariorg/sample-server-extension).
+Necesitarás que el servidor de oskari se ejecute en respuesta a las demandas del XHR hechas por el frontend. Puedes descargar una copia pre-compilada del servidor de [http://www.oskari.org/download]. También puedes construirla desde la fuente por clonación [oskari-server](https://github.com/oskariorg/oskari-server) y [sample-server-extension](https://github.com/UPTechMX/es_py_extension).
 
 Las aplicaciones de Oskari frontend son construidas usando Webpack.
 
@@ -19,7 +19,7 @@ Asegúrate de contar con Node 10.x / NPM 5.x por lo menos.
 
 Asegúrate de contar con la ejecución del servidor de oskari en el localhost port 8080 (puede ser personalizado en webpack.config.js).
 
-## Ejecución del desarrollo
+## Ejecución en desarrollo
 
 El servidor Webpack dev se utiliza para servir al bundle JS (módulo) y a los activos cuando se ejecuta en un desarrollo local. Las llamadas XHR serán recuperadas al Java backend que se asumen serán ejecutadas en localhost:8080.
 
@@ -37,7 +37,7 @@ El servidor dev tiene activada la recarga automática cuando guardes los cambios
 
 ## Construir para la producción
 
-Para construir minifed JS y los activos ejecuta: `npm run build`.
+Para construir JS y activos minimalizados ejecuta: `npm run build`.
 
 Esto producirá archivos optimizados para la producción debajo de `dist/devapp/servlet/`. El script de construcción en el paquete j.son oskari-frontend, de nuevo, predefine el directorio de la aplicación muestra. También se predefine a una versión nombrada `devapp`. Tanto la aplicación como el número de la versión pueden ser parametrizadas para aplicaciones personalizadas.
 
@@ -47,17 +47,17 @@ Caso especial: Si en tu servidor de producción, la localización de tu index.js
 
     npm run build -- --env.absolutePublicPath=true
 
-## Personaliación de Oskari
+## Personalización de Oskari
 
-Cualquier aplicación personalizada debe usar la plantilla de [sample-server-extension](https://github.com/oskariorg/sample-server-extension) como base para servidores personalizados y crear un repositorio específico para aplicación para el frontend. 
+Cualquier aplicación personalizada debe usar la plantilla de [sample-server-extension](https://github.com/UPTechMX/es_py_extension) como base para servidores personalizados y crear un repositorio específico para aplicación para el frontend. 
 
-Puedes utilizar la plantilla de [sample-application](https://github.com/oskariorg/sample-application) para crear tu aplicación frontend personalizada. Mira más instrucciones en el repositorio de la aplicación muestra.
+Puedes utilizar la plantilla de [sample-application](https://github.com/UPTechMX/es_py_oskari-application) para crear tu aplicación frontend personalizada. Mira más instrucciones en el repositorio de la aplicación muestra.
 
 Ejecuta npm `build` y comandos `start` en la raíz de tu repositorio de la aplicación.
 
-## Dependencies
+## Dependencias
 
-¡Nota! Todas las depenencias (incluso las dev-dependencies como Webpack) se encuentran debajo de dependencias por una razón. La razón es que este repositorio se usa como dependencia para aplicaciones y las depenencias web-pack inherentes de las mismas automáticamente, en lugar de instalar y configurar sus propias versiones.
+¡Nota! Todas las depenencias (incluso las dev-dependencies como Webpack) se encuentran debajo de dependencias por una razón. La razón es que este repositorio se usa automáticamente como dependencia para aplicaciones y las dependencias web-pack inherentes de las mismas, en lugar de instalar y configurar sus propias versiones.
 
 # Problemas reportados
 
